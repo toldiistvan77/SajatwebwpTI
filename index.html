@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stilus.css">
+    <title>Saját Weboldal</title>
+</head>
+
+<body id="bemutatkozas">
+    <section class="navigacio">
+        <nav>
+            <div class="cim">
+                <h3>Saját Weboldal</h3>
+            </div>
+            <ul class="navbar">
+                <li><a class="horog" href="#bemutatkozas">Bemutatkozás</a></li>
+                <li><a class="horog" href="#css">CSS animációk</a></li>
+                <li><a class="horog" href="#javascript">JavaScript</a></li>
+                <li><a class="horog" href="#holokauszt">Téma</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <header>
+        <h1>Szia! Toldi István vagyok!</h1>
+        <h3>Szoftver- és webfejlesztő tanuló</h3>
+    </header>
+
+    <div class="kontener">
+        <article>
+            <div class="kep">
+                <img src="toldi.png" alt="Toldi István">
+            </div>
+            <div class="bemutatkozo" id="css">
+                <h1>Bemutatkozás</h1>
+                <p>Toldi István vagyok. A Mátészalkai Szakképzési Centrum Gépészeti Technikumban tanulok.
+                    Informatika ágazaton vagyok, azon belül szoftverfejlesztést és webprogramozást tanulok.</p>
+
+            </div>
+        </article>
+
+        <section id="javascript" class="css">
+            <h1 style="text-align: center;">CSS animációk</h1>
+            <div class="div">
+                <div class="box1">
+                    <h2>Animation duration</h2>
+                    <p>helykitöltő szöveg</p>
+                </div>
+                <div class="box2">
+                    <h2>Színváltó</h2>
+                    <p>helykitöltő szöveg</p>
+                </div>
+                <div class="box3">
+                    <h2>Jobbra balra</h2>
+                    <p>helykitöltő szöveg</p>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <script>
+                function osszead() {
+                    let a = document.matek.szam1.value * 1;
+                    let b = document.matek.szam2.value * 1;
+                    let vegeredmeny = a + b;
+                    document.getElementById("eredmeny").innerText = vegeredmeny;
+                }
+                function kivon() {
+                    let a = document.matek.szam1.value;
+                    let b = document.matek.szam2.value;
+                    let vegeredmeny = a - b;
+                    document.getElementById("eredmeny").innerText = vegeredmeny;
+                }
+                function szoroz() {
+                    let a = document.matek.szam1.value;
+                    let b = document.matek.szam2.value;
+                    let vegeredmeny = a * b;
+                    document.getElementById("eredmeny").innerText = vegeredmeny;
+                }
+                function oszt() {
+                    let a = document.matek.szam1.value;
+                    let b = document.matek.szam2.value;
+                    let vegeredmeny = a / b;
+                    document.getElementById("eredmeny").innerText = vegeredmeny;
+                }
+            </script>
+
+            <section class="js">
+                <h1 style="text-align: center;">JavaScript</h1><br>
+                <h2 style="text-align: center;">Számolás</h2>
+                <div class="szamolas">
+                    <form name="matek">
+                        <div>
+                            a: <input type="text" name="szam1"><br><br>
+                            b: <input type="text" name="szam2">
+                        </div>
+                        <div class="gombok">
+                            <input class="gomb" type="button" value="Összeadás" onclick="osszead()">
+                            <input class="gomb" type="button" value="Kivonás" onclick="kivon()">
+                            <input class="gomb" type="button" value="Szorzás" onclick="szoroz()">
+                            <input class="gomb" type="button" value="Osztás" onclick="oszt()">
+                        </div>
+
+                    </form>
+                </div>
+                <p id="eredmeny" style="text-align: center; font-size: xx-large;">0</p><br>
+            </section>
+        </main>
+
+        <aside id="holokauszt">
+            <script>
+                function info() {
+                    alert('Auschwitz teljes táborkomplexumában körülbelül 1,1 millió embert gyilkoltak meg 1940 és 1945 között.\nNagyjából így oszlik meg:\n- ~1 000 000 zsidó\n- 70–75 000 lengyel\n- ~21 000 roma és szinti\n- ~15 000 szovjet hadifogoly\n- 10–15 000 egyéb nemzetiségű fogoly')
+                }
+            </script>
+            <h1 style="text-align: center;">Holokauszt</h1>
+            <img class="holokep" src="auschwitz.png" alt="Auschwitz">
+            <p>A holokauszt a második világháború idején, 1933 és 1945 között zajló népirtás volt, amelynek során a náci
+                Németország és szövetségesei, valamint közreműködő szervezetek üldözték és tömegesen meggyilkolták az
+                európai zsidóságot. A zsidók mellett más üldözött csoportokat is értek hátrányos megkülönböztetések,
+                deportálások és gyilkosságok.</p>
+            <p>A folyamat fokozatosan alakult ki: a zsidó lakosságot először jogi és társadalmi korlátozásokkal
+                sújtották, majd gettókba kényszerítették, később pedig tömeges deportálásokra került sor. Az áldozatok
+                jelentős részét koncentrációs- és megsemmisítő táborokba szállították, amelyek közül Auschwitz-Birkenau
+                vált az egyik legismertebbé.</p>
+            <img class="holokep" src="ausbarrak.png" alt="barrack">
+            <p>Magyarországon 1944-ben gyorsult fel a zsidó lakosság deportálása. Több százezer embert szállítottak el,
+                közülük sokakat Auschwitz-Birkenauba deportáltak. A háború végére az európai zsidóság jelentős része
+                életét vesztette.</p>
+            <p>A holokauszt történetének megismerése a 20. század történelmének egyik fontos része. A korszak eseményeit
+                történelmi források, visszaemlékezések, fényképek és dokumentumok segítségével kutatják.</p>
+            <button class="gomb" onclick="info()">Egyéb érdekesség</button>
+        </aside>
+    </div>
+
+    <section class="lablec">
+        <footer>
+            <div class="kapcsolat">
+                Kapcsolat: <a class="gomb"
+                    onclick="navigator.clipboard.writeText('istvantoldi077@gmail.com'); alert('Email-cím másolva!')">E-mail
+                    másolása</a>
+                <a class="gomb" target="_blank" href="https://github.com/toldiistvan77">Github</a>
+            </div>
+            <div class="zaro">
+                <p>Toldi István © Saját Projekt</p>
+            </div>
+        </footer>
+    </section>
+
+
+</body>
+
+</html>
