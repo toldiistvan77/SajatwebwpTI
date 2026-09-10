@@ -282,6 +282,11 @@ aside {
     box-shadow: 1px 1px 10px gray;
 }
 
+aside:hover {
+    box-shadow: 4px 4px 15px gray;
+    transform: translateY(-2px);
+}
+
 .holokep{
     width: 100%;
     max-width: none;
