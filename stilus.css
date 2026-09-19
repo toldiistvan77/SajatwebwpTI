@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     height: 100%;
     width: 100%;
@@ -68,8 +72,9 @@ header {
     color: #81a198;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 /* bemutatkozas */
@@ -96,17 +101,21 @@ img {
     height: auto;
 }
 
+.kep {
+    flex-shrink: 0;
+}
+
 /* css */
 
 .css {
-    margin-top: 75px;
-    background-color: #dfdfdf;
     margin: 25px;
     margin-top: 75px;
+    background-color: #dfdfdf;
     padding: 16px;
     border-radius: 20px;
     transition: all 0.3s ease;
     box-shadow: 1px 1px 10px gray;
+    overflow: hidden;
 }
 
 .css:hover {
@@ -126,7 +135,6 @@ img {
     animation-iteration-count: infinite;
     animation-delay: 1s;
     animation-timing-function: ease-in-out;
-    /* lassan indul majd begyorsul */
 }
 
 @keyframes movee {
@@ -144,11 +152,9 @@ img {
         margin-left: 0;
         background-color: cadetblue;
     }
-
 }
 
 .box2 {
-    border-top: 50px;
     margin: 0 auto;
     margin-top: 75px;
     padding: 15px;
@@ -287,9 +293,11 @@ aside:hover {
     transform: translateY(-2px);
 }
 
-.holokep{
+.holokep {
     width: 100%;
     max-width: none;
+    height: auto;
+    display: block;
 }
 
 /* lablec */
@@ -317,8 +325,223 @@ footer {
     align-items: center;
 }
 
-.kapcsolat {
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+/* ================================================= */
+/*                     MOBIL                         */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    /* navigacio */
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cim h3 {
+        margin: 5px 0 10px 0;
+    }
+
+    .navbar {
+        gap: 5px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .horog {
+        display: block;
+        padding: 8px;
+    }
+
+    /* fejlec */
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header h3 {
+        font-size: 17px;
+    }
+
+    /* kontener */
+
+    .kontener {
+        padding: 0 5px;
+    }
+
+    /* bemutatkozas */
+
+    article {
+        flex-direction: column;
+        margin: 20px 10px;
+        margin-top: 40px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .kep {
+        text-align: center;
+    }
+
+    .kep img {
+        max-width: 160px;
+    }
+
+    .bemutatkozo h1 {
+        font-size: 25px;
+    }
+
+    /* css animaciok */
+
+    .css {
+        margin: 20px 10px;
+        margin-top: 40px;
+        padding: 15px;
+    }
+
+    .css > h1 {
+        font-size: 25px;
+    }
+
+    .box1,
+    .box2 {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .box1 h2,
+    .box2 h2,
+    .box3 h2 {
+        font-size: 17px;
+    }
+
+    /* box1 mobilon kisebb tavolsagon mozog */
+
+    .box1 {
+        animation-name: moveeMobile;
+    }
+
+    @keyframes moveeMobile {
+        0% {
+            margin-left: 0;
+            background-color: blueviolet;
+        }
+
+        50% {
+            margin-left: calc(100% - 120px);
+            background-color: tomato;
+        }
+
+        100% {
+            margin-left: 0;
+            background-color: cadetblue;
+        }
+    }
+
+    /* box3 mobilon kisebb tavolsagon mozog */
+
+    .box3 {
+        width: 90px;
+        height: 120px;
+    }
+
+    @keyframes mozogMobile {
+        0% {
+            transform: translateX(0);
+        }
+
+        20% {
+            transform: translateX(35px);
+        }
+
+        40% {
+            transform: translateX(-35px);
+        }
+
+        60% {
+            transform: translateX(0);
+        }
+
+        80% {
+            transform: translateX(35px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .box3 {
+        animation-name: mozogMobile;
+    }
+
+    /* javascript */
+
+    main {
+        margin-top: 40px;
+    }
+
+    .js {
+        margin: 20px 10px;
+        margin-top: 40px;
+        padding: 15px;
+    }
+
+    .js h1 {
+        font-size: 25px;
+    }
+
+    .js h2 {
+        font-size: 20px;
+    }
+
+    .szamolas form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .szamolas form > div:first-child {
+        text-align: center;
+    }
+
+    .gombok {
+        justify-content: center;
+    }
+
+    .gomb {
+        padding: 10px;
+    }
+
+    /* tema */
+
+    aside {
+        margin: 20px 10px;
+        margin-top: 40px;
+        padding: 15px;
+    }
+
+    aside h1 {
+        font-size: 26px;
+    }
+
+    aside p {
+        line-height: 1.6;
+    }
+
+    .holokep {
+        width: 100%;
+    }
+
+    /* lablec */
+
+    footer {
+        text-align: center;
+        justify-content: center;
+    }
 }
