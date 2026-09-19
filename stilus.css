@@ -123,6 +123,16 @@ img {
     transform: translateY(-2px);
 }
 
+.box1,
+.box2,
+.box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
 .box1 {
     margin-top: 75px;
     background-color: cadetblue;
@@ -139,17 +149,17 @@ img {
 
 @keyframes movee {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
         background-color: blueviolet;
     }
 
     50% {
-        margin-left: calc(100% - 155px);
+        transform: translateX(calc(100% - 125px));
         background-color: tomato;
     }
 
     100% {
-        margin-left: 0;
+        transform: translateX(0);
         background-color: cadetblue;
     }
 }
@@ -197,11 +207,11 @@ img {
     }
 
     20% {
-        transform: translateX(calc(50% + 50px));
+        transform: translateX(40px);
     }
 
     40% {
-        transform: translateX(calc(-50% - 50px));
+        transform: translateX(-40px);
     }
 
     60% {
@@ -209,12 +219,23 @@ img {
     }
 
     80% {
-        transform: translateX(calc(50% + 50px));
+        transform: translateX(40px);
     }
 
     100% {
         transform: translateX(0);
     }
+}
+
+.box1 h2,
+.box2 h2,
+.box3 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(12px, 2vw, 17px);
+    line-height: 1.2;
+    text-align: center;
+    overflow-wrap: break-word;
 }
 
 /* javascript */
@@ -325,9 +346,7 @@ footer {
     align-items: center;
 }
 
-/* ================================================= */
-/*                     MOBIL                         */
-/* ================================================= */
+/* telefon */
 
 @media (max-width: 600px) {
 
@@ -410,18 +429,27 @@ footer {
 
     .box1,
     .box2 {
-        width: 100px;
-        height: 100px;
+        width: min(125px, 35vw);
+        height: min(125px, 35vw);
+        padding: 10px;
+    }
+
+    .box3 {
+        width: min(100px, 30vw);
+        height: min(150px, 45vw);
         padding: 10px;
     }
 
     .box1 h2,
     .box2 h2,
     .box3 h2 {
-        font-size: 17px;
+        font-size: clamp(11px, 4vw, 16px);
+        line-height: 1.15;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        overflow-wrap: anywhere;
     }
-
-    /* box1 mobilon kisebb tavolsagon mozog */
 
     .box1 {
         animation-name: moveeMobile;
@@ -429,26 +457,23 @@ footer {
 
     @keyframes moveeMobile {
         0% {
-            margin-left: 0;
+            transform: translateX(0);
             background-color: blueviolet;
         }
 
         50% {
-            margin-left: calc(100% - 120px);
+            transform: translateX(calc(100% - 35vw));
             background-color: tomato;
         }
 
         100% {
-            margin-left: 0;
+            transform: translateX(0);
             background-color: cadetblue;
         }
     }
 
-    /* box3 mobilon kisebb tavolsagon mozog */
-
     .box3 {
-        width: 90px;
-        height: 120px;
+        animation-name: mozogMobile;
     }
 
     @keyframes mozogMobile {
@@ -457,11 +482,11 @@ footer {
         }
 
         20% {
-            transform: translateX(35px);
+            transform: translateX(25px);
         }
 
         40% {
-            transform: translateX(-35px);
+            transform: translateX(-25px);
         }
 
         60% {
@@ -469,16 +494,12 @@ footer {
         }
 
         80% {
-            transform: translateX(35px);
+            transform: translateX(25px);
         }
 
         100% {
             transform: translateX(0);
         }
-    }
-
-    .box3 {
-        animation-name: mozogMobile;
     }
 
     /* javascript */
