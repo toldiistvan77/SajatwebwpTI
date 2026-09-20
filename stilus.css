@@ -65,7 +65,7 @@ nav {
     border-radius: 15px;
 }
 
-/* fejlec */
+/* fejléc */
 
 header {
     background-color: #3B5D50;
@@ -77,7 +77,7 @@ header {
     padding: 20px;
 }
 
-/* bemutatkozas */
+/* bemutatkozás */
 
 article {
     background-color: #dfdfdf;
@@ -105,7 +105,7 @@ img {
     flex-shrink: 0;
 }
 
-/* css */
+/* CSS animációk */
 
 .css {
     margin: 25px;
@@ -140,6 +140,8 @@ img {
     border-radius: 15px;
     width: 125px;
     height: 125px;
+    position: relative;
+    left: 0;
     animation-name: movee;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -149,17 +151,17 @@ img {
 
 @keyframes movee {
     0% {
-        transform: translateX(0);
+        left: 0;
         background-color: blueviolet;
     }
 
     50% {
-        transform: translateX(calc(100% - 125px));
+        left: calc(100% - 125px);
         background-color: tomato;
     }
 
     100% {
-        transform: translateX(0);
+        left: 0;
         background-color: cadetblue;
     }
 }
@@ -238,7 +240,7 @@ img {
     overflow-wrap: break-word;
 }
 
-/* javascript */
+/* JavaScript */
 
 main {
     margin-top: 75px;
@@ -297,7 +299,7 @@ input {
     transform: translateY(-2px);
 }
 
-/* tema */
+/* téma */
 
 aside {
     background-color: #dfdfdf;
@@ -321,7 +323,7 @@ aside:hover {
     display: block;
 }
 
-/* lablec */
+/* lábléc */
 
 .lablec {
     background-color: #3B5D50;
@@ -350,7 +352,7 @@ footer {
 
 @media (max-width: 600px) {
 
-    /* navigacio */
+    /* navigáció */
 
     nav {
         flex-direction: column;
@@ -373,7 +375,7 @@ footer {
         padding: 8px;
     }
 
-    /* fejlec */
+    /* fejléc */
 
     header {
         padding: 15px;
@@ -387,13 +389,13 @@ footer {
         font-size: 17px;
     }
 
-    /* kontener */
+    /* konténer */
 
     .kontener {
         padding: 0 5px;
     }
 
-    /* bemutatkozas */
+    /* bemutatkozás */
 
     article {
         flex-direction: column;
@@ -415,7 +417,7 @@ footer {
         font-size: 25px;
     }
 
-    /* css animaciok */
+    /* CSS animációk */
 
     .css {
         margin: 20px 10px;
@@ -462,7 +464,7 @@ footer {
         }
 
         50% {
-            transform: translateX(calc(100% - 35vw));
+            transform: translateX(100px);
             background-color: tomato;
         }
 
@@ -502,7 +504,7 @@ footer {
         }
     }
 
-    /* javascript */
+    /* JavaScript */
 
     main {
         margin-top: 40px;
@@ -539,7 +541,7 @@ footer {
         padding: 10px;
     }
 
-    /* tema */
+    /* téma */
 
     aside {
         margin: 20px 10px;
@@ -559,7 +561,7 @@ footer {
         width: 100%;
     }
 
-    /* lablec */
+    /* lábléc */
 
     footer {
         text-align: center;
